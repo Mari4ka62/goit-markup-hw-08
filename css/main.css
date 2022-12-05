@@ -1,3 +1,19 @@
+.container {
+  width: 1200px;
+  margin: 0 auto;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+.container--flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
 body {
   background-color: #fff;
   color: #757575;
@@ -25,22 +41,6 @@ img {
   padding: 0;
   margin: 0;
   list-style: none;
-}
-
-.container {
-  width: 1200px;
-  margin: 0 auto;
-  padding-left: 15px;
-  padding-right: 15px;
-}
-
-.container--flex {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
 }
 
 .section {
@@ -211,96 +211,6 @@ img {
 
 .page-header {
   border-bottom: 1px solid #ECECEC;
-}
-
-.site-nav {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  margin-left: 93px;
-}
-
-.site-nav__item + .site-nav__item {
-  margin-left: 50px;
-}
-
-.site-nav__link {
-  position: relative;
-  display: block;
-  padding-top: 32px;
-  padding-bottom: 32px;
-  color: #212121;
-  font-weight: 500;
-  font-size: 14px;
-  line-height: 1.14;
-  letter-spacing: 0.02em;
-  text-decoration: none;
-  -webkit-transition-property: color;
-  transition-property: color;
-  -webkit-transition-duration: 250ms;
-          transition-duration: 250ms;
-  -webkit-transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-          transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-}
-.site-nav__link:hover, .site-nav__link:focus {
-  color: #2196F3;
-}
-
-.site-nav__link--current {
-  color: #2196F3;
-}
-.site-nav__link--current::after {
-  content: "";
-  position: absolute;
-  bottom: -1px;
-  right: 0;
-  width: 100%;
-  height: 4px;
-  border-radius: 2px;
-  background-color: #2196F3;
-}
-
-.auth-nav {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  margin-left: auto;
-}
-
-.auth-nav__item + .auth-nav__item {
-  margin-left: 50px;
-}
-
-.auth-nav__link {
-  display: -webkit-inline-box;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  padding: 32px 0;
-  color: #757575;
-  font-weight: 500;
-  font-size: 14px;
-  line-height: 1.14;
-  letter-spacing: 0.02em;
-  text-decoration: none;
-  -webkit-transition-property: color;
-  transition-property: color;
-  -webkit-transition-duration: 250ms;
-          transition-duration: 250ms;
-  -webkit-transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-          transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-}
-.auth-nav__link:hover, .auth-nav__link:focus {
-  color: #2196F3;
-}
-
-.auth-nav__icon {
-  -ms-flex-item-align: center;
-      align-self: center;
-  margin-right: 10px;
-  fill: currentColor;
 }
 
 .logo {
