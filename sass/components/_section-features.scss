@@ -1,6 +1,11 @@
 // Особливості 
-.features {
+.features{
+@media screen and (min-width:768px) {
     display: flex;
+    flex-wrap: wrap;
+    margin: -30px;
+    
+}
 }
 .features__title {
     margin-bottom: 10px;
@@ -9,17 +14,39 @@
     font-size: 14px;
     line-height: 1.14;
     text-transform: uppercase;
+
+    @media screen and (max-width:767px) {
+        text-align: center;
+        
+    }
+}
+.features__item{
+    @media screen and (min-width:480px) {
+        width: 100%;
+}
+    @media screen and (min-width:768px) {
+    width: calc((100% - 4 * 30px)/2);
+    margin: $main-distance-element;
+
+}
+    @media screen and (min-width:1200px) {
+    width: calc((100% - 8 * 30px)/4);
+    margin: $main-distance-element;
+    
+
+}
+&:not(:last-child){
+    @media screen and (max-width:767px) {
+        margin-bottom: $main-distance-element;
+    
+        }
 }
 
-.features__item + .features__item {
-    margin-left: $main-distance-element;
 }
-
 .features__wrap {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 270px;
     height: 120px;
     margin-bottom: $main-distance-element;
 
