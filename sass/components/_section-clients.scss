@@ -1,0 +1,36 @@
+// Наші клієнти 
+.clients {
+    display: flex;
+}
+
+.clients__item + .clients__item {
+    margin-left: $main-distance-element;
+}
+
+.clients__link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 170px;
+    height: 92px;
+
+    border: 1px solid $primary-icon-color;
+    border-radius: 4px;
+
+    text-decoration: none;
+    color: $primary-icon-color;
+
+    transition-property: color, border-color;
+    transition-duration: $transition-time;
+    transition-timing-function: $timing-function;
+
+    &:hover,
+    &:focus{
+        color: $accent-color;
+        border-color: $accent-color;
+    }
+}
+
+.clients__icon {
+    fill: currentColor;
+}

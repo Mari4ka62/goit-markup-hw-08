@@ -1,0 +1,34 @@
+// Герой 
+.hero {
+    text-align: center;
+
+    padding-top: 200px;
+    padding-bottom: 200px;
+    max-width: 1600px;
+    height: 600px;
+    margin-left: auto;
+    margin-right: auto;
+
+    background-image:
+        linear-gradient(to right,
+            rgba(47, 48, 58, 0.4),
+            rgba(47, 48, 58, 0.4)),
+        url(../images/backgroundhero.jpg);
+    background-position: center;
+    background-size: cover;
+    background-color: #C4C4C4;
+}
+
+.hero__title {
+    padding-left: 252px;
+    padding-right: 252px;
+    margin-top: 0;
+    margin-bottom: $main-distance-element;
+
+    color: $main-background-color;
+    letter-spacing: 0.06em;
+    font-weight: 900;
+    font-size: 44px;
+    line-height: 1.4;
+    text-transform: uppercase;
+}
