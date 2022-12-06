@@ -19,12 +19,22 @@
     <header class="page-header">
       <div class="container container--flex">
         <!-- Логотип -->
-        <a href="#" class="logo"
+        <a href="#" class="logo header-logo"
           ><span>Web</span><span class="logo__text--black">Studio</span></a
         >
+        
         <nav>
           <!-- Навігація -->
-          <ul class="site-nav list">
+          <button
+          class="menu-toggle js-open-menu"
+          aria-expanded="false"
+          aria-controls="mobile-menu"
+        >
+          <svg width="40" height="40">
+            <use href="./images/icons.svg#icon-menu-burger"></use>
+          </svg>
+        </button>
+          <ul class="site-nav list menu">
             <li class="site-nav__item">
               <a
                 href="./index.html"
@@ -41,7 +51,7 @@
           </ul>
         </nav>
         <!-- Аудентифікація -->
-        <ul class="auth-nav list">
+        <ul class="auth-nav list menu">
           <li class="auth-nav__item">
             <a href="mailto:info@devstudio.com" class="link auth-nav__link">
               <svg class="auth-nav__icon" width="16px" height="12px">
@@ -57,6 +67,42 @@
               </svg>
               +38 096 111 11 11</a
             >
+          </li>
+        </ul>
+      </div>
+      <div class="menu-container js-menu-container" id="mobile-menu">
+        <button class="menu-toggle js-close-menu">
+          <svg width="40" height="40">
+            <use href="./images/icons.svg#icon-close-40px"></use>
+          </svg>
+        </button>
+
+
+          <ul class="site-nav list mobile-menu ">
+            <li class="site-nav__item">
+              <a
+                href="./index.html"
+                class="site-nav__link site-nav__link--current"
+                >Студія</a
+              >
+            </li>
+            <li class="site-nav__item">
+              <a href="./portfolio.html" class="site-nav__link">Портфоліо</a>
+            </li>
+            <li class="site-nav__item">
+              <a href="#" class="site-nav__link">Контакти</a>
+            </li>
+          </ul>
+        </nav>
+        <!-- Аудентифікація -->
+        <ul class="auth-nav list mobile-menu">
+          <li class="auth-nav__item">
+            <a href="mailto:info@devstudio.com" class="link auth-nav__link">
+              info@devstudio.com</a
+            >
+          </li>
+          <li class="auth-nav__item">
+            <a href="tel:+380961111111" class="link auth-nav__link"></a>
           </li>
         </ul>
       </div>

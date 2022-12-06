@@ -19,15 +19,13 @@
   }
 }
 
-@media screen and (min-width: 768px) {
-  .container--flex {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-  }
+.container--flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 body {
@@ -247,11 +245,6 @@ img {
   display: flex;
   margin-left: 93px;
 }
-@media screen and (max-width: 767px) {
-  .site-nav {
-    display: none;
-  }
-}
 
 .site-nav__item + .site-nav__item {
   margin-left: 50px;
@@ -302,11 +295,6 @@ img {
           align-items: center;
   margin-left: auto;
 }
-@media screen and (max-width: 767px) {
-  .auth-nav {
-    display: none;
-  }
-}
 
 .auth-nav__item + .auth-nav__item {
   margin-left: 50px;
@@ -341,12 +329,87 @@ img {
   fill: currentColor;
 }
 
+@media (max-width: 767px) {
+  .menu {
+    display: none;
+  }
+}
+.menu-toggle {
+  min-height: 40px;
+  min-width: 40px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin: 0;
+  padding: 0;
+  background-color: transparent;
+  cursor: pointer;
+  border: none;
+  outline: none;
+}
+
+@media (min-width: 768px) {
+  .menu-toggle {
+    display: none;
+  }
+}
+.menu-toggle:hover,
+.menu-toggle:focus {
+  fill: #2196F3;
+}
+
+.menu-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  padding: 32px;
+  background-color: #3f51b5;
+  z-index: 999;
+  -webkit-transform: translateX(100%);
+          transform: translateX(100%);
+  -webkit-transition: -webkit-transform 250ms ease-in-out;
+  transition: -webkit-transform 250ms ease-in-out;
+  transition: transform 250ms ease-in-out;
+  transition: transform 250ms ease-in-out, -webkit-transform 250ms ease-in-out;
+}
+
+.menu-container.is-open {
+  -webkit-transform: translateX(0);
+          transform: translateX(0);
+}
+
+.menu-container .menu-toggle {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  color: #fff;
+}
+
+.mobile-menu {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
 .logo {
   font-family: "Raleway", sans-serif;
   font-size: 26px;
   line-height: 1.2;
   color: #2196F3;
   text-decoration: none;
+}
+
+.header-logo {
+  margin-left: 0;
+  margin-right: auto;
 }
 
 .logo__text--black {
