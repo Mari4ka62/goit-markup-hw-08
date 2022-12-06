@@ -7,15 +7,34 @@
 }
 
 .footer-elements {
-    display: flex;
+    @media screen and (max-width:767px) {
+        text-align: center;
+        
+    }
+    @media screen and (min-width:768px) {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: baseline;
+            
+    
+        }
+    @media screen and (min-width:768px) and (max-width:1199px) {
+            justify-content: space-around;
+    
+        }
 }
 //Блок Адрес
 .footer-adress {
-    margin-right: 70px;
+    @media screen and (max-width:1199px) {
+        margin-bottom: 60px;
+    }
 }
 
 .main-adress {
     font-style: inherit;
+    @media screen and (min-width:1200px) {
+            margin-right: 94px;
+        }
 }
 
 .main-adress__link {
@@ -37,12 +56,16 @@
 }
 
 .main-adress__item:not(:last-child) {
-    margin-bottom: 9px;
+    margin-bottom: 12px;
 }
 
+
+//Блок Зв'язку
+.footer-connection{
+    margin-bottom: 60px;
+}
 .footer-connection__title {
     margin-bottom: 20px;
-    margin-top: 12px;
 
     font-weight: 700;
     font-size: 14px;
@@ -50,10 +73,10 @@
     text-transform: uppercase;
     color: #FFFFFF;
 }
-//Блок Зв'язку
 .footer-connection__list {
     display: flex;
     align-items: center;
+    justify-content: center;
 }
 .footer-connection__link {
     display: flex;
@@ -85,12 +108,20 @@
 
 // Форма підписки 
 .footer-form {
-    margin-left: auto;
+    
+    @media screen and (max-width:1199px) {
+        text-align: center;
+    }
+    @media screen and(min-width:1200px) {
+        margin-left: auto;
+        
+    } 
+   
 }
 
 .footer-label__title {
     display: block;
-    margin-top: 12px;
+     
     margin-bottom: 20px;
 
     font-weight: 700;
@@ -102,8 +133,13 @@
 
 .footer-label__input {
     height: 50px;
-    width: 358px;
-    margin-right: 12px;
+    width: 100%;
+    
+    @media screen and (min-width:1200px) {
+        width: 358px;
+        margin-right: 12px;
+    }
+    margin-bottom: 20px;
     padding-left: 16px;
     padding-bottom: 15px;
     padding-top: 15px;
