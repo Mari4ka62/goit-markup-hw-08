@@ -4,21 +4,43 @@
 
 // Навігація 
 .site-nav {
-    display: flex;
-    margin-left: 93px;
+    
+    @media screen and (min-width:768px) {
+        display: flex;
+         
+        
+    }
+        @media screen and (min-width:1200px) {
+            
+            margin-left: 93px;
+    
+        }
+    &.mobile-menu{
+        padding-left:48px;
+        padding-top: 40px; 
+        margin-bottom: 306px;
+    }
     
 }
+.site-nav__item{
 
-.site-nav__item+.site-nav__item {
-    margin-left: 50px;
+    .mobile-menu &:not(:last-child){
+        padding-bottom: 32px;
+    }
+
+    
 }
+@media screen and (min-width:768px) {
+    .site-nav__item+.site-nav__item {
+            margin-left: 50px;
+        }
+}
+
 
 .site-nav__link {
     position: relative;
     display: block;
-    padding-top: 32px;
-    padding-bottom: 32px;
-
+    
 
     color: $title-text-color;
     font-weight: 500;
@@ -35,6 +57,16 @@
     &:focus {
         color: $accent-color;
     }
+        .mobile-menu & {
+            font-weight: 500;
+            font-size: 40px;
+            line-height: calc(47px/40px);
+            letter-spacing: 0.02em;
+        }
+        @media screen and(min-width:768px) {
+            padding-top: 32px;
+            padding-bottom: 32px;
+        }
 }
 
 .site-nav__link--current {
@@ -56,19 +88,35 @@
 
 // Аудентифікація 
 .auth-nav {
-    display: flex;
-    align-items: center;
-    margin-left: auto;
+    @media screen and (min-width:1200px) {
+            display: flex;
+            align-items: center;
+            margin-left: auto;
+        }
 
+    &.mobile-menu {
+        padding-left: 40px;
+        margin-bottom: 64px;
+    }
+     
 }
-
-.auth-nav__item+.auth-nav__item {
-    margin-left: 50px;
+.auth-nav__item{
+     .mobile-menu &:not(:last-child){
+        padding-bottom: 32px;}
+    @media screen and (min-width:768px) and (max-width:1199px){
+        &:not(:last-child){
+            padding-bottom: 10px;} ;      
+     }
+    
+}
+@media screen and (min-width:1200px) {
+    .auth-nav__item+.auth-nav__item {
+            margin-left: 50px;
+        }
 }
 
 .auth-nav__link {
     display: inline-flex;
-    padding: 32px 0;
 
     color: $primary-text-color;
     font-weight: 500;
@@ -77,49 +125,38 @@
     letter-spacing: 0.02em;
     text-decoration: none;
 
-    transition-property: color;
+    transition-property: color,font-size;
     transition-duration: $transition-time;
     transition-timing-function: $timing-function;
 
     &:hover,
     &:focus {
         color: $accent-color;
+        
     }
+    @media screen and(max-width:767px) {
+        font-size: 24px;
+        &:hover,
+            &:focus {
+                font-size: 36px;
+        
+            }
+        
+    }
+    @media screen and(min-width:1200px) {
+        padding: 32px 0;
 }
-
+}
 .auth-nav__icon {
     align-self: center;
     margin-right: 10px;
     fill: currentColor;
 }
-@media (max-width: 767px) {
-    .menu {
+.menu{
+    @media (max-width: 767px) {    
         display: none;
-    }
-}
-.menu-toggle {
-    min-height: 40px;
-    min-width: 40px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+        }
 
-    margin: 0;
-    padding: 0;
-    background-color: transparent;
-    cursor: pointer;
-    border: none;
-    outline: none;
-}
-
-@media (min-width: 768px) {
-    .menu-toggle {
-        display: none;
-    }
-}
-.menu-toggle:hover,
-.menu-toggle:focus {
-    fill: $accent-color;
 }
 .menu-container {
     position: fixed;
@@ -127,29 +164,50 @@
     left: 0;
     width: 100vw;
     height: 100vh;
-    padding: 32px;
-    background-color: #3f51b5;
+    padding: 15px;
+    background-color: $main-background-color;
     z-index: 999;
 
     transform: translateX(100%);
-    transition: transform 250ms ease-in-out;
-}
+    transition: transform $transition-time $timing-function;
 
-.menu-container.is-open {
-    transform: translateX(0);
-}
-
-.menu-container .menu-toggle {
-    position: absolute;
-    top: 16px;
-    right: 16px;
-    color: #fff;
+    &.is-open {
+            transform: translateX(0);
+        }
+    & .menu-toggle {
+                    position: absolute;
+                    top: 15px;
+                    right: 15px;
+                    
+                }
 }
 
 .mobile-menu {
     padding: 0;
     margin: 0;
     list-style: none;
+
+}
+.mobile-social{
+    padding-left: 40px;
+    display: flex;
+    flex-wrap: wrap;
+
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 1.2;
+    letter-spacing: 0.02em;
+    color: #2196F3;
+
+}
+.mobile-social__item{
+    
+    &:not(:last-child) {
+    
+        border-right: 1px solid rgba(33, 33, 33, 0.2);
+        margin-right: 10px;
+        padding-right: 10px;
+    }
 }
 
 
