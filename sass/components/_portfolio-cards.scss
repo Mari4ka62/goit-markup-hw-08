@@ -1,36 +1,68 @@
 .filter {
     display: flex;
-    justify-content: center;
+    flex-wrap: wrap;
+    
+    margin-bottom: 40px;
+    @media screen and (max-width:767px) {
+            margin-top: -15px;
+        }
 
-    margin-top: 0;
-    margin-bottom: 50px;
+    @media screen and (min-width:768px) {
+        margin-bottom: 30px;
+        justify-content: center;
+    }
+    @media screen and (min-width:1200px) {
+        margin-bottom: 50px;
+    }
 }
 
-.filter__item + .filter__item {
-    margin-left: 8px;
+.filter__item{
+    
+    &:not(:last-child){
+        margin-right: 8px;
+    }
+    @media screen and (max-width:767px) {
+        margin-top: 15px;
+    }
 }
 
 .work-list {
     display: flex;
     flex-wrap: wrap;
 
-    margin-left: -30px;
-    margin-top: -30px;
+    margin: -15px;
     padding-left: 0;
 }
 
 .work-list__item {
-    flex-basis: calc(100%/3 - $main-distance-element);
-    margin-left: $main-distance-element;
-    margin-top: $main-distance-element;
+    @media screen and (min-width:480px) {
+            width: 100%;
+        }
+    @media screen and (min-width:768px) {
+            flex-basis: calc((100% - 4 * 15px)/2);
+            margin: 15px;
+        }
+    @media screen and (min-width:1200px) {
+        flex-basis: calc((100% - 6 * 15px)/3);
+        margin: 15px;
+        }
 
     transition-property: box-shadow;
     transition-duration: $transition-time;
     transition-timing-function: $timing-function;
+        
+    &:not(:last-child) {
+            @media screen and (max-width:767px) {
+                margin-bottom: $main-distance-element;
+    
+            }
+}
 }
 
 .project {
-    display: inline-block;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
     text-decoration: none;
 
     transition-property: box-shadow;
@@ -75,6 +107,7 @@
 }
 
 .project__meta {
+    flex-grow: 1;
     padding: 20px 24px;
     border-left: 1px solid #EEEEEE;
     border-right: 1px solid #EEEEEE;

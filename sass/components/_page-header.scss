@@ -4,39 +4,29 @@
 
 // Навігація 
 .site-nav {
-    
+    @media screen and (max-width:767px) {
+       margin-bottom: 300px;
+    }
     @media screen and (min-width:768px) {
         display: flex;
-         
-        
     }
-        @media screen and (min-width:1200px) {
-            
+    @media screen and (min-width:1200px) {
             margin-left: 93px;
     
-        }
-    &.mobile-menu{
-        padding-left:48px;
-        padding-top: 40px; 
-        margin-bottom: 300px;
     }
-    
 }
 .site-nav__item{
-
-    .mobile-menu &:not(:last-child){
-        padding-bottom: 32px;
-    }
-
-    
+    @media screen and (max-width:767px) {
+        &:not(:last-child) {
+            padding-bottom: 32px;
+            }
+        }
 }
 @media screen and (min-width:768px) {
     .site-nav__item+.site-nav__item {
             margin-left: 50px;
         }
 }
-
-
 .site-nav__link {
     position: relative;
     display: block;
@@ -57,15 +47,15 @@
     &:focus {
         color: $accent-color;
     }
-        .mobile-menu & {
-            font-weight: 500;
-            font-size: 40px;
-            line-height: calc(47px/40px);
-            letter-spacing: 0.02em;
+    @media screen and(max-width:767px) {
+        font-weight: 500;
+        font-size: 40px;
+        line-height: calc(47px/40px);
+        letter-spacing: 0.02em;
         }
-        @media screen and(min-width:768px) {
-            padding-top: 32px;
-            padding-bottom: 32px;
+    @media screen and(min-width:768px) {
+        padding-top: 32px;
+        padding-bottom: 32px;
         }
 }
 
@@ -93,19 +83,19 @@
             align-items: center;
             margin-left: auto;
         }
-
-    &.mobile-menu {
-        padding-left: 40px;
+    @media screen and (max-width:767px) {
         margin-bottom: 64px;
-    }
-     
+        } 
 }
 .auth-nav__item{
-     .mobile-menu &:not(:last-child){
-        padding-bottom: 32px;}
+    @media screen and (max-width:767px){
+        &:not(:last-child) {
+                padding-bottom: 32px;
+            }
+        }
     @media screen and (min-width:768px) and (max-width:1199px){
         &:not(:last-child){
-            padding-bottom: 10px;} ;      
+            padding-bottom: 10px;}      
      }
     
 }
@@ -164,7 +154,6 @@
     left: 0;
     width: 100vw;
     height: 100vh;
-    padding: 15px;
     background-color: $main-background-color;
     z-index: 999;
 
@@ -183,13 +172,16 @@
 }
 
 .mobile-menu {
-    padding: 0;
+    display: flex;
+    flex-direction: column;
+    padding-left: 40px;
+    padding-top: 48px;
+    padding-bottom: 48px;
     margin: 0;
     list-style: none;
 
 }
 .mobile-social{
-    padding-left: 40px;
     display: flex;
     flex-wrap: wrap;
 
