@@ -99,7 +99,15 @@
     appearance: none;
     position: absolute;
 }
+.checkbox-label__text{
+    font-size: 12px;
+    line-height: 1.2;
 
+    @media screen and (min-width:1200px) {
+            font-size: 14px;
+            line-height: 1.7;
+        }
+}
 .checkbox-label__icon {
     display: inline-block;
     height: 15px;

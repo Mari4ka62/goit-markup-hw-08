@@ -25,14 +25,14 @@
         <nav>
           <!-- Навігація -->
           <button
-          class="menu-toggle js-open-menu"
-          aria-expanded="false"
-          aria-controls="mobile-menu"
-        >
-          <svg width="40" height="40">
-            <use href="./images/icons.svg#icon-menu-burger"></use>
-          </svg>
-        </button>
+            class="menu-toggle js-open-menu"
+            aria-expanded="false"
+            aria-controls="mobile-menu"
+          >
+            <svg width="40" height="40">
+              <use href="./images/icons.svg#icon-menu-burger"></use>
+            </svg>
+          </button>
           <ul class="site-nav list menu">
             <li class="site-nav__item">
               <a
@@ -75,32 +75,29 @@
             <use href="./images/icons.svg#icon-close-40px"></use>
           </svg>
         </button>
-          <ul class="site-nav list mobile-menu ">
-            <li class="site-nav__item">
-              <a
-                href="./index.html"
-                class="site-nav__link "
-                >Студія</a
-              >
-            </li>
-            <li class="site-nav__item">
-              <a href="./portfolio.html" class="site-nav__link">Портфоліо</a>
-            </li>
-            <li class="site-nav__item">
-              <a href="#" class="site-nav__link">Контакти</a>
-            </li>
-          </ul>
-        </nav>
+        <ul class="site-nav list mobile-menu">
+          <li class="site-nav__item">
+            <a href="./index.html" class="site-nav__link">Студія</a>
+          </li>
+          <li class="site-nav__item">
+            <a href="./portfolio.html" class="site-nav__link">Портфоліо</a>
+          </li>
+          <li class="site-nav__item">
+            <a href="#" class="site-nav__link">Контакти</a>
+          </li>
+        </ul>
         <!-- Аудентифікація -->
         <ul class="auth-nav list mobile-menu">
           <li class="auth-nav__item">
-            <a href="tel:+380961111111" class="link auth-nav__link">+38 096 111 11 11</a>
+            <a href="tel:+380961111111" class="link auth-nav__link"
+              >+38 096 111 11 11</a
+            >
           </li>
           <li class="auth-nav__item">
             <a href="mailto:info@devstudio.com" class="link auth-nav__link">
               info@devstudio.com</a
             >
-          </li>  
+          </li>
         </ul>
         <ul class="mobile-social mobile-menu">
           <li class="mobile-social__item">Instagram</li>
@@ -113,7 +110,7 @@
     <main>
       <!-- Hero -->
       <section class="hero">
-        <div class="container">
+        <div class="container hero-container">
           <h1 class="hero__title">Ефективні рішення для вашого бізнесу</h1>
           <button type="button" class="button hero__button" data-modal-open>
             Замовити послугу
@@ -183,7 +180,11 @@
             <li class="tasks__item">
               <div class="tasks__thumb">
                 <img
-                  src="./images/whatwedoimg1.jpg"
+                  srcset="
+                    ./images/tasks-images/img1@1x.jpg 1x,
+                    ./images/tasks-images/img1@2x.jpg 2x
+                  "
+                  src="./images/tasks-images/img1@1x.jpg"
                   alt="Робота над кодом"
                   width="370"
                 />
@@ -193,8 +194,12 @@
             <li class="tasks__item">
               <div class="tasks__thumb">
                 <img
-                  src="./images/whatwedoimg2.jpg"
-                  alt="Робота над дизайном"
+                  srcset="
+                    ./images/tasks-images/img2@1x.jpg 1x,
+                    ./images/tasks-images/img2@2x.jpg 2x
+                  "
+                  src="./images/tasks-images/img2@1x.jpg"
+                  alt="Робота над кодом"
                   width="370"
                 />
                 <p class="tasks__name">Мобільні додатки</p>
@@ -203,8 +208,12 @@
             <li class="tasks__item">
               <div class="tasks__thumb">
                 <img
-                  src="./images/whatwedoimg3.jpg"
-                  alt="Робота над графічним дизайном"
+                  srcset="
+                    ./images/tasks-images/img3@1x.jpg 1x,
+                    ./images/tasks-images/img3@2x.jpg 2x
+                  "
+                  src="./images/tasks-images/img3@1x.jpg"
+                  alt="Робота над кодом"
                   width="370"
                 />
                 <p class="tasks__name">Дизайнерські рішення</p>
@@ -220,9 +229,18 @@
           <ul class="members list">
             <li class="members__item">
               <img
-                src="./images/ourteamimg1.jpg"
+                srcset="
+                  ./images/team-members/img1_270.jpg 270w,
+                  ./images/team-members/img1_354.jpg 354w,
+                  ./images/team-members/img1_450.jpg 450w,
+                  ./images/team-members/img1_540.jpg 540w,
+                  ./images/team-members/img1_708.jpg 708w,
+                  ./images/team-members/img1_900.jpg 900w
+                "
+                sizes="(min-width: 1200px) 270px, (min-width: 768px) 354px, (min-width: 480px) 450px, 100vw"
+                src="./images/team-members/img1_450.jpg"
                 alt="Фото співробітника"
-                width="270"
+                width="450"
               />
               <div class="members__content">
                 <h3 class="members__title">Ігор Дем'яненко</h3>
@@ -261,9 +279,18 @@
             </li>
             <li class="members__item">
               <img
-                src="./images/ourteamimg2.jpg"
+                srcset="
+                  ./images/team-members/img2_270.jpg 270w,
+                  ./images/team-members/img2_354.jpg 354w,
+                  ./images/team-members/img2_450.jpg 450w,
+                  ./images/team-members/img2_540.jpg 540w,
+                  ./images/team-members/img2_708.jpg 708w,
+                  ./images/team-members/img2_900.jpg 900w
+                "
+                sizes="(min-width: 1200px) 270px, (min-width: 768px) 354px, (min-width: 480px) 450px, 100vw"
+                src="./images/team-members/img2_450.jpg"
                 alt="Фото співробітника"
-                width="270"
+                width="450"
               />
               <div class="members__content">
                 <h3 class="members__title">Ольга Рєпіна</h3>
@@ -302,9 +329,18 @@
             </li>
             <li class="members__item">
               <img
-                src="./images/ourteamimg3.jpg"
+                srcset="
+                  ./images/team-members/img3_270.jpg 270w,
+                  ./images/team-members/img3_354.jpg 354w,
+                  ./images/team-members/img3_450.jpg 450w,
+                  ./images/team-members/img3_540.jpg 540w,
+                  ./images/team-members/img3_708.jpg 708w,
+                  ./images/team-members/img3_900.jpg 900w
+                "
+                sizes="(min-width: 1200px) 270px, (min-width: 768px) 354px, (min-width: 480px) 450px, 100vw"
+                src="./images/team-members/img3_450.jpg"
                 alt="Фото співробітника"
-                width="270"
+                width="450"
               />
               <div class="members__content">
                 <h3 class="members__title">Микола Тарасов</h3>
@@ -343,9 +379,18 @@
             </li>
             <li class="members__item">
               <img
-                src="./images/ourteamimg4.jpg"
+                srcset="
+                  ./images/team-members/img4_270.jpg 270w,
+                  ./images/team-members/img4_354.jpg 354w,
+                  ./images/team-members/img4_450.jpg 450w,
+                  ./images/team-members/img4_540.jpg 540w,
+                  ./images/team-members/img4_708.jpg 708w,
+                  ./images/team-members/img4_900.jpg 900w
+                "
+                sizes="(min-width: 1200px) 270px, (min-width: 768px) 354px, (min-width: 480px) 450px, 100vw"
+                src="./images/team-members/img4_450.jpg"
                 alt="Фото співробітника"
-                width="270"
+                width="450"
               />
               <div class="members__content">
                 <h3 class="members__title">Михайло Єрмаков</h3>
@@ -492,7 +537,7 @@
                 name="check-agreement"
               />
               <span class="checkbox-label__icon"></span>
-              <span
+              <span class="checkbox-label__text"
                 >Погоджуюся з розсилкою та приймаю
                 <a href="" class="checkbox-label__link link">Умови договору</a>
               </span>
